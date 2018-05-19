@@ -21,6 +21,6 @@ Copy resulting HTML to string object:
 
     textBox1.Text = HtmlDocumentFactory.HtmlDocumentToString(htmldoc);
     
-Free unmanaged resource when you no longer need the document:
+Free unmanaged resources when you no longer need the document:
 
     HtmlDocumentFactory.ReleaseHtmlDocument(htmldoc);
