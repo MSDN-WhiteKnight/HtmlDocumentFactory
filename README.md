@@ -27,7 +27,7 @@ Free unmanaged resources when you no longer need the document:
 
     HtmlDocumentFactory.ReleaseHtmlDocument(htmldoc);
     
-If you need to create HtmlDocument based on existing HTML content, pass a string into constructor: 
+If you need to create HtmlDocument based on existing HTML content, pass a string into CreateHtmlDocument method: 
 
     string html = "<p>Hello, world!</p>";
     HtmlDocument htmldoc = HtmlDocumentFactory.CreateHtmlDocument(html);
