@@ -2,6 +2,8 @@
 
 Windows Forms framework has a nice `HtmlDocument` class for HTML manupulation. However, it can only work with documents from `WebBrowser` control, and there's no public constructor to create new `HtmlDocument` instance from scratch. This library attempts to fix this problem. It consists of a single static class `HtmlLib.HtmlDocumentFactory` that provides helper methods for creating and destroying HTML documents and converting them to strings.
 
+[Download binaries](https://yadi.sk/d/lPk5bGov3WCXsD)
+
 **Usage**
 
 Add reference to *HtmlDocumentFactory.dll* and import namespace with `using HtmlLib;` clause.
@@ -24,3 +26,8 @@ Copy resulting HTML to string object:
 Free unmanaged resources when you no longer need the document:
 
     HtmlDocumentFactory.ReleaseHtmlDocument(htmldoc);
+    
+If you need to create HtmlDocument based on existing HTML content, pass a string into constructor: 
+
+    string html = "<p>Hello, world!</p>";
+    HtmlDocument htmldoc = HtmlDocumentFactory.CreateHtmlDocument(html);
